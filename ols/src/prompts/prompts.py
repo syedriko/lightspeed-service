@@ -8,6 +8,7 @@ from ols.constants import SUBJECT_ALLOWED, SUBJECT_REJECTED
 # TODO: OLS-503 Fine tune system prompt
 QUERY_SYSTEM_PROMPT = """You are an assistant for question-answering tasks \
 related to the openshift and kubernetes container orchestration platforms. \
+Never include URLs in your replies.
 """
 
 USE_PREVIOUS_HISTORY = """
