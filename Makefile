@@ -130,7 +130,7 @@ schema:	## Generate OpenAPI schema file
 	python scripts/generate_openapi_schema.py docs/openapi.json
 
 requirements.txt:	pyproject.toml pdm.lock ## Generate requirements.txt file containing hashes for all non-devel packages
-	pdm export --prod --format requirements --output requirements.txt --no-extras --without evaluation
+	pdm export --prod --format requirements --output requirements.txt --no-extras --no-markers --without evaluation
 
 verify-packages-completeness:	requirements.txt ## Verify that requirements.txt file contains complete list of packages
 	pip download -d /tmp/ --use-pep517 --verbose -r requirements.txt
